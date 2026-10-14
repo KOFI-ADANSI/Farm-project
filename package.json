@@ -1,0 +1,30 @@
+{
+  "name": "farm-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"node --watch --env-file-if-exists=.env.local server/index.js\" \"vite\"",
+    "dev:api": "node --watch --env-file-if-exists=.env.local server/index.js",
+    "start": "node --env-file-if-exists=.env.local server/index.js",
+    "reset:database": "node server/reset-database.js",
+    "build": "vite build",
+    "lint": "oxlint",
+    "test": "node --test",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "recharts": "^3.10.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
+  }
+}
